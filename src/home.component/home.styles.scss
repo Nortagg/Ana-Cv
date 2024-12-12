@@ -1,0 +1,113 @@
+.home-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: auto;
+
+  .img-frame {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ana-picture {
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+      box-shadow: 0px 0px 4px rgba(245, 245, 245, 0.7);
+      animation: ShowFade 1.5s;
+      filter: grayscale(1);
+      @keyframes ShowFade {
+        from {
+          transform: scale(0);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      &:hover {
+        width: 200px;
+        height: 200px;
+        border-radius: 0rem 2rem;
+        box-shadow: 0px 0px 5px rgba(245, 245, 245, 0.7);
+      }
+    }
+
+    .decoration {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      box-shadow: 0px 0px 0px rgba(245, 245, 245, 0),
+        inset 0px 0px 0px rgba(245, 245, 245, 0);
+      border-radius: 2rem 0rem;
+      pointer-events: none;
+      transform: scale(0);
+      opacity: 0;
+      transition: 0.5s all ease;
+    }
+
+    .ana-picture:hover + .decoration {
+      transform: scale(1);
+      opacity: 1;
+      box-shadow: 0px 0px 3px rgba(245, 245, 245, 0.7),
+        inset 0px 0px 3px rgba(245, 245, 245, 0.7);
+    }
+  }
+
+  .welcome-txt {
+    font-size: 20px;
+    color: rgba(245, 245, 245, 0.7);
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    animation: FromRightShow 2s;
+    @keyframes FromRightShow {
+      from {
+        position: relative;
+        right: 120px;
+        opacity: 0;
+      }
+      to {
+        position: relative;
+        right: 0;
+        opacity: 1;
+      }
+    }
+  }
+
+  .title {
+    display: flex;
+    text-align: center;
+    text-wrap: balance;
+    width: 28rem;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      150deg,
+      rgba(255, 255, 255) 0%,
+      rgb(78, 78, 78) 70%
+    );
+    background-size: cover;
+    background-clip: text;
+    font-size: 38px;
+    color: transparent;
+    filter: drop-shadow(0px 0px 4px rgb(7, 7, 7));
+    animation: FromTopShow 3s;
+    @keyframes FromTopShow {
+      from {
+        position: relative;
+        top: 130px;
+        opacity: 0;
+      }
+      to {
+        position: relative;
+        top: 0;
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: rgba(22, 22, 22, 1);
+  background-image: radial-gradient(
+    rgba(57, 57, 57, 0.9) 1px,
+    rgba(22, 22, 22, 1) 1px
+  );
+  background-size: 35px 35px;
+  font-family: sans-serif;
+}
